@@ -26,10 +26,36 @@ Please also include information about the reproducibility and the severity/impac
 
 ### Steps To Reproduce
 Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+1. Submit the following declaration:
+```json
+{
+    "schemaVersion": "3.14.0",
+    "class": "ADC",
+    "Tenant": {
+        "class": "Tenant",
+        "Application": {
+            "template": "generic",
+            "vip": {
+                "class": "Service_HTTP",
+                "pool": "web_pool",
+                "virtualAddresses": ["192.0.2.0"]
+            }
+        }
+    }
+}
+```
+
+2. Observe the following error response:
+```json
+{
+    "code": 500,
+    "message": "declaration failed",
+    "response": "Something bad happened",
+    "host": "localhost",
+    "tenant": "Tenant",
+    "runTime": 5234
+}
+```
 
 ### Expected Behavior
 A clear and concise description of what you expected to happen.
