@@ -17,8 +17,8 @@ When filing an issue please check to see if an issue already exists that matches
 -->
 
 ### Environment
-Application Services Version:
-BIG-IP Version:
+ * Application Services Version:
+ * BIG-IP Version:
 
 ### Summary
 A clear and concise description of what the bug is.
